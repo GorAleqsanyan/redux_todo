@@ -1,21 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeX } from "./redux/slices/testSlice";
-
-import "./App.css";
 import { changeSalary } from "./redux/slices/userSlice";
 
+import Todo from "./components/todo/Todo";
+
+import "./App.css";
+
 function App() {
-  const x = useSelector((state) => state.test.x);
-  const dispatch = useDispatch();
+  // const x = useSelector((state) => state.test.x);
+  // const dispatch = useDispatch();
 
-  const name = useSelector((state) => state.user.name);
-  const salary = useSelector((state) => state.user.salary);
+  // const name = useSelector((state) => state.user.name);
+  // const salary = useSelector((state) => state.user.salary);
 
-  console.log(x);
+  // console.log(x);
 
   return (
     <div className="App">
-      <h1>text {x}</h1>
+      {/* <h1>text {x}</h1>
       <h2>
         {name}, du stanum es{" "}
         {salary <= 1000
@@ -43,7 +45,8 @@ function App() {
         }}
       >
         Add salary
-      </button>
+      </button> */}
+      <Todo />
     </div>
   );
 }
